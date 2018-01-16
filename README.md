@@ -2,6 +2,8 @@
 
 https://www.vaultproject.io/
 
+Also see https://github.com/hashicorp/docker-vault
+
 ## Quickstart - running Vault with storage in Google Cloud
 
 ### 1. Build Docker image and push to repository
