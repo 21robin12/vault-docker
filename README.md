@@ -49,7 +49,9 @@ kubectl create secret generic vault-config-secret
 
 ### 5. Launch Vault and expose with a service in Kubernetes
 
-Make sure to substitute `docker.io/<ACCOUNT>/vault-gcloud` with image built in step 1
+ - Save the following as `vault.yaml`
+ - Substitute `docker.io/<ACCOUNT>/vault-gcloud` with image built in step 1
+ - Run `kubectl create -f vault.yaml`
 
 ```
 apiVersion: v1

@@ -1,2 +1,4 @@
 config.json
 gcloud-sa-key.json
+vault.yaml
+.kube
