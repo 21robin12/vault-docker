@@ -1,4 +1,4 @@
-# Vault
+# Vault in Docker
 
 ## Quickstart - running Vault with storage in Google Cloud
 

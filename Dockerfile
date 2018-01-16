@@ -13,4 +13,6 @@ RUN mv vault /usr/local/bin
 COPY config.json /install/config.json
 COPY gcloud-service-account-key.json /install/gcloud-service-account-key.json
 
+EXPOSE 8200
+
 CMD vault server -config=/install/config.json
