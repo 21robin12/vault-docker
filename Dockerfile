@@ -10,6 +10,9 @@ RUN curl -O https://releases.hashicorp.com/vault/0.9.1/vault_0.9.1_linux_amd64.z
 RUN unzip vault_0.9.1_linux_amd64.zip
 RUN mv vault /usr/local/bin
 
+# enable mlock - see https://www.vaultproject.io/docs/configuration/index.html#disable_mlock
+RUN setcap cap_ipc_lock=+ep $(readlink -f $(which vault))
+
 EXPOSE 8200
 
-CMD vault server -config=/install/config.json
+CMD vault server -config=/install/secrets-volume/config.json
