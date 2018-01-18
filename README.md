@@ -93,3 +93,20 @@ spec:
         add:
         - IPC_LOCK
 ```
+
+### 6. Initialise and unseal Vault
+
+TODO get this in Dockerfile?
+
+```
+vault init -address="http://127.0.0.1:8200"
+
+// only need to do 3 of 5? how can i automate this?
+vault unseal -address="http://127.0.0.1:8200" qwmdj982d902oindjqb2ijqdjonjksadklsm2dj22ddd
+vault unseal -address="http://127.0.0.1:8200" qwmdj982d902oindjqb2ijqdjonjksadklsm2dj22ddd
+vault unseal -address="http://127.0.0.1:8200" qwmdj982d902oindjqb2ijqdjonjksadklsm2dj22ddd
+vault unseal -address="http://127.0.0.1:8200" qwmdj982d902oindjqb2ijqdjonjksadklsm2dj22ddd
+vault unseal -address="http://127.0.0.1:8200" qwmdj982d902oindjqb2ijqdjonjksadklsm2dj22ddd
+
+vault auth -address="http://127.0.0.1:8200" hello123
+```
