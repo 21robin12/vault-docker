@@ -27,11 +27,11 @@ TODO: look at authentication. Use tokens? https://www.vaultproject.io/docs/auth/
 ```
 {
     "listener": [{
-		"tcp": {
-			"address": "127.0.0.1:8200",
+        "tcp": {
+            "address": "127.0.0.1:8200",
             "tls_disable": 1
-		}
-	}],
+        }
+    }],
     "storage": {
         "gcs": {
             "bucket": "<GOOGLE_CLOUD_BUCKET_ID>",
