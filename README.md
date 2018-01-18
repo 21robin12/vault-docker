@@ -88,4 +88,8 @@ spec:
     - name: secrets-volume
       readOnly: true
       mountPath: "/install/secrets-volume"
+    securityContext:
+      capabilities:
+        add:
+        - IPC_LOCK
 ```

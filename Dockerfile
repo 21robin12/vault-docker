@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
 
+# create vault group and user
+RUN addgroup vault && adduser --system --ingroup vault vault
+
 RUN apt-get update
 RUN apt-get install curl -y
 RUN apt-get install unzip -y
@@ -12,6 +15,8 @@ RUN mv vault /usr/local/bin
 
 # enable mlock - see https://www.vaultproject.io/docs/configuration/index.html#disable_mlock
 RUN setcap cap_ipc_lock=+ep $(readlink -f $(which vault))
+
+
 
 EXPOSE 8200
 
